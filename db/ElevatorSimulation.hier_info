@@ -1,0 +1,1242 @@
+|Test2
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+KEY[0] => KEY[0].IN2
+KEY[1] => KEY[1].IN1
+KEY[2] => KEY[2].IN1
+CLOCK_50 => temp[0].CLK
+CLOCK_50 => temp[1].CLK
+CLOCK_50 => temp[2].CLK
+CLOCK_50 => temp[3].CLK
+CLOCK_50 => temp[4].CLK
+CLOCK_50 => temp[5].CLK
+CLOCK_50 => temp[6].CLK
+CLOCK_50 => temp[7].CLK
+CLOCK_50 => temp[8].CLK
+CLOCK_50 => temp[9].CLK
+CLOCK_50 => temp[10].CLK
+CLOCK_50 => temp[11].CLK
+CLOCK_50 => temp[12].CLK
+CLOCK_50 => temp[13].CLK
+CLOCK_50 => temp[14].CLK
+CLOCK_50 => temp[15].CLK
+CLOCK_50 => temp[16].CLK
+CLOCK_50 => temp[17].CLK
+CLOCK_50 => temp[18].CLK
+CLOCK_50 => temp[19].CLK
+CLOCK_50 => temp[20].CLK
+CLOCK_50 => temp[21].CLK
+CLOCK_50 => temp[22].CLK
+CLOCK_50 => temp[23].CLK
+CLOCK_50 => temp[24].CLK
+CLOCK_50 => temp[25].CLK
+CLOCK_50 => temp[26].CLK
+CLOCK_50 => temp[27].CLK
+CLOCK_50 => temp[28].CLK
+CLOCK_50 => temp[29].CLK
+CLOCK_50 => temp[30].CLK
+CLOCK_50 => temp[31].CLK
+HEX0[0] << DisplayLED:Display.port4
+HEX0[1] << DisplayLED:Display.port4
+HEX0[2] << DisplayLED:Display.port4
+HEX0[3] << DisplayLED:Display.port4
+HEX0[4] << DisplayLED:Display.port4
+HEX0[5] << DisplayLED:Display.port4
+HEX0[6] << DisplayLED:Display.port4
+HEX1[0] << DisplayLED:Display.port5
+HEX1[1] << DisplayLED:Display.port5
+HEX1[2] << DisplayLED:Display.port5
+HEX1[3] << DisplayLED:Display.port5
+HEX1[4] << DisplayLED:Display.port5
+HEX1[5] << DisplayLED:Display.port5
+HEX1[6] << DisplayLED:Display.port5
+HEX4[0] << DisplayLED:Display.port6
+HEX4[1] << DisplayLED:Display.port6
+HEX4[2] << DisplayLED:Display.port6
+HEX4[3] << DisplayLED:Display.port6
+HEX4[4] << DisplayLED:Display.port6
+HEX4[5] << DisplayLED:Display.port6
+HEX4[6] << DisplayLED:Display.port6
+HEX5[0] << DisplayLED:Display.port7
+HEX5[1] << DisplayLED:Display.port7
+HEX5[2] << DisplayLED:Display.port7
+HEX5[3] << DisplayLED:Display.port7
+HEX5[4] << DisplayLED:Display.port7
+HEX5[5] << DisplayLED:Display.port7
+HEX5[6] << DisplayLED:Display.port7
+LEDG[0] << RCO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN1
+RCO => clock.IN1
+RESET => ~NO_FANOUT~
+LOAD => LOAD.IN1
+out[0] <= Octal_4_mux_1:mux.port5
+out[1] <= Octal_4_mux_1:mux.port5
+out[2] <= Octal_4_mux_1:mux.port5
+out[3] <= Octal_4_mux_1:mux.port5
+out[4] <= Octal_4_mux_1:mux.port5
+out[5] <= Octal_4_mux_1:mux.port5
+out[6] <= Octal_4_mux_1:mux.port5
+out[7] <= Octal_4_mux_1:mux.port5
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux
+in[0] => in[0].IN4
+in[1] => in[1].IN4
+in[2] => in[2].IN4
+in[3] => in[3].IN4
+in[4] => in[4].IN4
+in[5] => in[5].IN4
+in[6] => in[6].IN4
+in[7] => in[7].IN4
+out0[0] <= D_flipflop_RST:D00.port3
+out0[1] <= D_flipflop_RST:D01.port3
+out0[2] <= D_flipflop_RST:D02.port3
+out0[3] <= D_flipflop_RST:D03.port3
+out0[4] <= D_flipflop_RST:D04.port3
+out0[5] <= D_flipflop_RST:D05.port3
+out0[6] <= D_flipflop_RST:D06.port3
+out0[7] <= D_flipflop_RST:D07.port3
+out1[0] <= D_flipflop_RST:D10.port3
+out1[1] <= D_flipflop_RST:D11.port3
+out1[2] <= D_flipflop_RST:D12.port3
+out1[3] <= D_flipflop_RST:D13.port3
+out1[4] <= D_flipflop_RST:D14.port3
+out1[5] <= D_flipflop_RST:D15.port3
+out1[6] <= D_flipflop_RST:D16.port3
+out1[7] <= D_flipflop_RST:D17.port3
+out2[0] <= D_flipflop_RST:D20.port3
+out2[1] <= D_flipflop_RST:D21.port3
+out2[2] <= D_flipflop_RST:D22.port3
+out2[3] <= D_flipflop_RST:D23.port3
+out2[4] <= D_flipflop_RST:D24.port3
+out2[5] <= D_flipflop_RST:D25.port3
+out2[6] <= D_flipflop_RST:D26.port3
+out2[7] <= D_flipflop_RST:D27.port3
+out3[0] <= D_flipflop_RST:D30.port3
+out3[1] <= D_flipflop_RST:D31.port3
+out3[2] <= D_flipflop_RST:D32.port3
+out3[3] <= D_flipflop_RST:D33.port3
+out3[4] <= D_flipflop_RST:D34.port3
+out3[5] <= D_flipflop_RST:D35.port3
+out3[6] <= D_flipflop_RST:D36.port3
+out3[7] <= D_flipflop_RST:D37.port3
+LOAD => LOAD.IN1
+RESET => RESET.IN1
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+rst => count[0]~reg0.ACLR
+rst => count[1]~reg0.ACLR
+rst => count[2]~reg0.ACLR
+rst => count[3]~reg0.PRESET
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D00
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D01
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D02
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D03
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D04
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D05
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D06
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D07
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D10
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D11
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D12
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D13
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D14
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D15
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D16
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D17
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D20
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D21
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D22
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D23
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D24
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D25
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D26
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D27
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D30
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D31
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D32
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D33
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D34
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D35
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D36
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D37
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|one_4_mux_1:muxselect
+in0 => out.DATAA
+in1 => out.DATAB
+in2 => ~NO_FANOUT~
+in3 => ~NO_FANOUT~
+select => Decoder0.IN0
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|counter2bits:Counter
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|RegisterMultiInput:Register|Octal_4_mux_1:mux
+in0[0] => Mux7.IN0
+in0[1] => Mux6.IN0
+in0[2] => Mux5.IN0
+in0[3] => Mux4.IN0
+in0[4] => Mux3.IN0
+in0[5] => Mux2.IN0
+in0[6] => Mux1.IN0
+in0[7] => Mux0.IN0
+in1[0] => Mux7.IN1
+in1[1] => Mux6.IN1
+in1[2] => Mux5.IN1
+in1[3] => Mux4.IN1
+in1[4] => Mux3.IN1
+in1[5] => Mux2.IN1
+in1[6] => Mux1.IN1
+in1[7] => Mux0.IN1
+in2[0] => Mux7.IN2
+in2[1] => Mux6.IN2
+in2[2] => Mux5.IN2
+in2[3] => Mux4.IN2
+in2[4] => Mux3.IN2
+in2[5] => Mux2.IN2
+in2[6] => Mux1.IN2
+in2[7] => Mux0.IN2
+in3[0] => Mux7.IN3
+in3[1] => Mux6.IN3
+in3[2] => Mux5.IN3
+in3[3] => Mux4.IN3
+in3[4] => Mux3.IN3
+in3[5] => Mux2.IN3
+in3[6] => Mux1.IN3
+in3[7] => Mux0.IN3
+select[0] => Mux0.IN5
+select[0] => Mux1.IN5
+select[0] => Mux2.IN5
+select[0] => Mux3.IN5
+select[0] => Mux4.IN5
+select[0] => Mux5.IN5
+select[0] => Mux6.IN5
+select[0] => Mux7.IN5
+select[1] => Mux0.IN4
+select[1] => Mux1.IN4
+select[1] => Mux2.IN4
+select[1] => Mux3.IN4
+select[1] => Mux4.IN4
+select[1] => Mux5.IN4
+select[1] => Mux6.IN4
+select[1] => Mux7.IN4
+out[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|Comparator:Comparator
+inA0[0] => inA0[0].IN1
+inA0[1] => inA0[1].IN1
+inA0[2] => inA0[2].IN1
+inA0[3] => inA0[3].IN1
+inA1[0] => inA1[0].IN1
+inA1[1] => inA1[1].IN1
+inA1[2] => inA1[2].IN1
+inA1[3] => inA1[3].IN1
+inB0[0] => inB0[0].IN1
+inB0[1] => inB0[1].IN1
+inB0[2] => inB0[2].IN1
+inB0[3] => inB0[3].IN1
+inB1[0] => inB1[0].IN1
+inB1[1] => inB1[1].IN1
+inB1[2] => inB1[2].IN1
+inB1[3] => inB1[3].IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|Comparator:Comparator|Comparator4bits:SmallBit
+inA[0] => LessThan0.IN4
+inA[0] => Equal0.IN3
+inA[1] => LessThan0.IN3
+inA[1] => Equal0.IN2
+inA[2] => LessThan0.IN2
+inA[2] => Equal0.IN1
+inA[3] => LessThan0.IN1
+inA[3] => Equal0.IN0
+inB[0] => LessThan0.IN8
+inB[0] => Equal0.IN7
+inB[1] => LessThan0.IN7
+inB[1] => Equal0.IN6
+inB[2] => LessThan0.IN6
+inB[2] => Equal0.IN5
+inB[3] => LessThan0.IN5
+inB[3] => Equal0.IN4
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|Comparator:Comparator|Comparator4bits:BigBit
+inA[0] => LessThan0.IN4
+inA[0] => Equal0.IN3
+inA[1] => LessThan0.IN3
+inA[1] => Equal0.IN2
+inA[2] => LessThan0.IN2
+inA[2] => Equal0.IN1
+inA[3] => LessThan0.IN1
+inA[3] => Equal0.IN0
+inB[0] => LessThan0.IN8
+inB[0] => Equal0.IN7
+inB[1] => LessThan0.IN7
+inB[1] => Equal0.IN6
+inB[2] => LessThan0.IN6
+inB[2] => Equal0.IN5
+inB[3] => LessThan0.IN5
+inB[3] => Equal0.IN4
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CircuitA:LogicCircuit
+in[0] => DU.DATAIN
+in[1] => E.DATAIN
+in[2] => ~NO_FANOUT~
+E <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+DU <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage
+clk => Q[0].CLK
+clk => Q[1].CLK
+clk => Q[2].CLK
+clk => Q[3].CLK
+clk => Q[4].CLK
+clk => Q[5].CLK
+clk => Q[6].CLK
+EN => always0.IN0
+EN => always0.IN0
+DU => always0.IN1
+DU => always0.IN1
+S0[0] <= changetoBCD:ChangetoBCD.port7
+S0[1] <= changetoBCD:ChangetoBCD.port7
+S0[2] <= changetoBCD:ChangetoBCD.port7
+S0[3] <= changetoBCD:ChangetoBCD.port7
+S1[0] <= changetoBCD:ChangetoBCD.port8
+S1[1] <= changetoBCD:ChangetoBCD.port8
+S1[2] <= changetoBCD:ChangetoBCD.port8
+S1[3] <= changetoBCD:ChangetoBCD.port8
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD
+A6 => A6.IN1
+A5 => A5.IN1
+A4 => A4.IN1
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => D0[0].DATAIN
+D0[0] <= A0.DB_MAX_OUTPUT_PORT_TYPE
+D0[1] <= adder4bits_single:ADDS3.port11
+D0[2] <= adder4bits_single:ADDS3.port10
+D0[3] <= adder4bits_single:ADDS3.port9
+D1[0] <= adder4bits_single:ADDS3.port8
+D1[1] <= adder4bits_single:ADDS2.port8
+D1[2] <= adder4bits_single:ADDS1.port8
+D1[3] <= adder4bits_single:ADDS0.port8
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+B3 => B3.IN1
+B2 => B2.IN1
+B1 => B1.IN1
+B0 => B0.IN1
+sum3 <= fulladder2:add4.sum
+sum2 <= fulladder2:add3.sum
+sum1 <= fulladder2:add2.sum
+sum0 <= fulladder2:add1.sum
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add1
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add1|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add1|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add2
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add2|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add2|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add3
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add3|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add3|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add4
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add4|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add4|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+B3 => B3.IN1
+B2 => B2.IN1
+B1 => B1.IN1
+B0 => B0.IN1
+sum3 <= fulladder2:add4.sum
+sum2 <= fulladder2:add3.sum
+sum1 <= fulladder2:add2.sum
+sum0 <= fulladder2:add1.sum
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add1
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add1|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add1|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add2
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add2|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add2|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add3
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add3|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add3|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add4
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add4|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add4|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+B3 => B3.IN1
+B2 => B2.IN1
+B1 => B1.IN1
+B0 => B0.IN1
+sum3 <= fulladder2:add4.sum
+sum2 <= fulladder2:add3.sum
+sum1 <= fulladder2:add2.sum
+sum0 <= fulladder2:add1.sum
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add1
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add1|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add1|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add2
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add2|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add2|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add3
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add3|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add3|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add4
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add4|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add4|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+B3 => B3.IN1
+B2 => B2.IN1
+B1 => B1.IN1
+B0 => B0.IN1
+sum3 <= fulladder2:add4.sum
+sum2 <= fulladder2:add3.sum
+sum1 <= fulladder2:add2.sum
+sum0 <= fulladder2:add1.sum
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add1
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add1|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add1|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add2
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add2|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add2|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add3
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add3|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add3|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add4
+A => A.IN1
+B => B.IN1
+c_in => c_in.IN1
+sum <= halfadder:HA2.sum
+c_out <= IC7432.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add4|halfadder:HA1
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add4|halfadder:HA2
+A => IC7486.IN0
+A => IC7408.IN0
+B => IC7486.IN1
+B => IC7408.IN1
+sum <= IC7486.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= IC7408.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|CounterDelay:CounterDelay
+clk => QD[0]~reg0.CLK
+clk => QD[1]~reg0.CLK
+clk => QD[2]~reg0.CLK
+clk => QD[3]~reg0.CLK
+RESET => always0.IN0
+ENABLE => always0.IN1
+LOAD => always0.IN1
+RCO <= RCO.DB_MAX_OUTPUT_PORT_TYPE
+QD[0] <= QD[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QD[1] <= QD[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QD[2] <= QD[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QD[3] <= QD[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Test2|DisplayLED:Display
+inA0[0] => inA0[0].IN1
+inA0[1] => inA0[1].IN1
+inA0[2] => inA0[2].IN1
+inA0[3] => inA0[3].IN1
+inA1[0] => inA1[0].IN1
+inA1[1] => inA1[1].IN1
+inA1[2] => inA1[2].IN1
+inA1[3] => inA1[3].IN1
+inB[0] => inB[0].IN1
+inB[1] => inB[1].IN1
+inB[2] => inB[2].IN1
+inB[3] => inB[3].IN1
+inD => inD.IN1
+outA0[0] <= BCD_to_7segment:Stage0.port1
+outA0[1] <= BCD_to_7segment:Stage0.port1
+outA0[2] <= BCD_to_7segment:Stage0.port1
+outA0[3] <= BCD_to_7segment:Stage0.port1
+outA0[4] <= BCD_to_7segment:Stage0.port1
+outA0[5] <= BCD_to_7segment:Stage0.port1
+outA0[6] <= BCD_to_7segment:Stage0.port1
+outA1[0] <= BCD_to_7segment:Stage1.port1
+outA1[1] <= BCD_to_7segment:Stage1.port1
+outA1[2] <= BCD_to_7segment:Stage1.port1
+outA1[3] <= BCD_to_7segment:Stage1.port1
+outA1[4] <= BCD_to_7segment:Stage1.port1
+outA1[5] <= BCD_to_7segment:Stage1.port1
+outA1[6] <= BCD_to_7segment:Stage1.port1
+outB[0] <= BCD_to_7segment:Delay.port1
+outB[1] <= BCD_to_7segment:Delay.port1
+outB[2] <= BCD_to_7segment:Delay.port1
+outB[3] <= BCD_to_7segment:Delay.port1
+outB[4] <= BCD_to_7segment:Delay.port1
+outB[5] <= BCD_to_7segment:Delay.port1
+outB[6] <= BCD_to_7segment:Delay.port1
+outD[0] <= DisplayDirection:Direction.port1
+outD[1] <= DisplayDirection:Direction.port1
+outD[2] <= DisplayDirection:Direction.port1
+outD[3] <= DisplayDirection:Direction.port1
+outD[4] <= DisplayDirection:Direction.port1
+outD[5] <= DisplayDirection:Direction.port1
+outD[6] <= DisplayDirection:Direction.port1
+
+
+|Test2|DisplayLED:Display|BCD_to_7segment:Stage0
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN0
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN0
+in[1] => out.IN0
+in[1] => out.IN1
+in[1] => out.IN1
+in[1] => out.IN0
+in[1] => out.IN1
+in[1] => out.IN0
+in[1] => out.IN0
+in[2] => out.IN1
+in[2] => out.IN1
+in[2] => out.IN1
+in[2] => out.IN0
+in[2] => out.IN1
+in[2] => out.IN1
+in[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+
+
+|Test2|DisplayLED:Display|BCD_to_7segment:Stage1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN0
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN0
+in[1] => out.IN0
+in[1] => out.IN1
+in[1] => out.IN1
+in[1] => out.IN0
+in[1] => out.IN1
+in[1] => out.IN0
+in[1] => out.IN0
+in[2] => out.IN1
+in[2] => out.IN1
+in[2] => out.IN1
+in[2] => out.IN0
+in[2] => out.IN1
+in[2] => out.IN1
+in[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+
+
+|Test2|DisplayLED:Display|BCD_to_7segment:Delay
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN0
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN1
+in[0] => out.IN0
+in[1] => out.IN0
+in[1] => out.IN1
+in[1] => out.IN1
+in[1] => out.IN0
+in[1] => out.IN1
+in[1] => out.IN0
+in[1] => out.IN0
+in[2] => out.IN1
+in[2] => out.IN1
+in[2] => out.IN1
+in[2] => out.IN0
+in[2] => out.IN1
+in[2] => out.IN1
+in[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+rst => out.IN1
+
+
+|Test2|DisplayLED:Display|DisplayDirection:Direction
+inD => Decoder0.IN0
+outD[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outD[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outD[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outD[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outD[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outD[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outD[6] <= <VCC>
+
+

@@ -1,0 +1,50 @@
+module Register_1_demux_4(in,out0,out1,out2,out3,LOAD,RESET);
+input [7:0]in;
+input RESET,LOAD;
+
+output [7:0]out0,out1,out2,out3;
+
+wire [3:0]Q;
+
+RingCounter Counter(Q,LOAD,RESET);
+
+D_flipflop_RST D00(in[0],Q[0],0,out0[0]);
+D_flipflop_RST D01(in[1],Q[0],0,out0[1]);
+D_flipflop_RST D02(in[2],Q[0],0,out0[2]);
+D_flipflop_RST D03(in[3],Q[0],0,out0[3]);
+D_flipflop_RST D04(in[4],Q[0],0,out0[4]);
+D_flipflop_RST D05(in[5],Q[0],0,out0[5]);
+D_flipflop_RST D06(in[6],Q[0],0,out0[6]);
+D_flipflop_RST D07(in[7],Q[0],0,out0[7]);
+
+D_flipflop_RST D10(in[0],Q[1],0,out1[0]);
+D_flipflop_RST D11(in[1],Q[1],0,out1[1]);
+D_flipflop_RST D12(in[2],Q[1],0,out1[2]);
+D_flipflop_RST D13(in[3],Q[1],0,out1[3]);
+D_flipflop_RST D14(in[4],Q[1],0,out1[4]);
+D_flipflop_RST D15(in[5],Q[1],0,out1[5]);
+D_flipflop_RST D16(in[6],Q[1],0,out1[6]);
+D_flipflop_RST D17(in[7],Q[1],0,out1[7]);
+
+D_flipflop_RST D20(in[0],Q[2],0,out2[0]);
+D_flipflop_RST D21(in[1],Q[2],0,out2[1]);
+D_flipflop_RST D22(in[2],Q[2],0,out2[2]);
+D_flipflop_RST D23(in[3],Q[2],0,out2[3]);
+D_flipflop_RST D24(in[4],Q[2],0,out2[4]);
+D_flipflop_RST D25(in[5],Q[2],0,out2[5]);
+D_flipflop_RST D26(in[6],Q[2],0,out2[6]);
+D_flipflop_RST D27(in[7],Q[2],0,out2[7]);
+
+D_flipflop_RST D30(in[0],Q[3],0,out3[0]);
+D_flipflop_RST D31(in[1],Q[3],0,out3[1]);
+D_flipflop_RST D32(in[2],Q[3],0,out3[2]);
+D_flipflop_RST D33(in[3],Q[3],0,out3[3]);
+D_flipflop_RST D34(in[4],Q[3],0,out3[4]);
+D_flipflop_RST D35(in[5],Q[3],0,out3[5]);
+D_flipflop_RST D36(in[6],Q[3],0,out3[6]);
+D_flipflop_RST D37(in[7],Q[3],0,out3[7]);
+
+endmodule
+
+
+

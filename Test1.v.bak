@@ -1,0 +1,20 @@
+module Test1(SW,KEY);
+
+input [7:0]SW;
+input [1:0]KEY;
+
+wire [3:0]outRegis0;
+wire [3:0]outRegis1;
+
+wire [2:0]result;
+
+wire EN;
+wire D_U;
+
+Register8bit Register(SW[3:0],SW[7:4],KEY[0],0,outRegis0,outRegis1);
+
+Comparator Comparator(outRegis0,outRegis1,Stage0,Stage1,result);
+
+CircuitA LogicCircuit(result,EN,D_U);
+
+Counter

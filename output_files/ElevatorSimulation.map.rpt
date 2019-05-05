@@ -1,0 +1,1009 @@
+Analysis & Synthesis report for ElevatorSimulation
+Fri Aug 24 12:42:35 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Port Connectivity Checks: "DisplayLED:Display|BCD_to_7segment:Delay"
+ 13. Port Connectivity Checks: "DisplayLED:Display|BCD_to_7segment:Stage1"
+ 14. Port Connectivity Checks: "DisplayLED:Display|BCD_to_7segment:Stage0"
+ 15. Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3"
+ 16. Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2"
+ 17. Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1"
+ 18. Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add4"
+ 19. Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add1"
+ 20. Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0"
+ 21. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D37"
+ 22. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D36"
+ 23. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D35"
+ 24. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D34"
+ 25. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D33"
+ 26. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D32"
+ 27. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D31"
+ 28. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D30"
+ 29. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D27"
+ 30. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D26"
+ 31. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D25"
+ 32. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D24"
+ 33. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D23"
+ 34. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D22"
+ 35. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D21"
+ 36. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D20"
+ 37. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D17"
+ 38. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D16"
+ 39. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D15"
+ 40. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D14"
+ 41. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D13"
+ 42. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D12"
+ 43. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D11"
+ 44. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D10"
+ 45. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D07"
+ 46. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D06"
+ 47. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D05"
+ 48. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D04"
+ 49. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D03"
+ 50. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D02"
+ 51. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D01"
+ 52. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D00"
+ 53. Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux"
+ 54. Post-Synthesis Netlist Statistics for Top Partition
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
+ 57. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Aug 24 12:42:35 2018       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; ElevatorSimulation                          ;
+; Top-level Entity Name              ; Test2                                       ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; 80                                          ;
+;     Total combinational functions  ; 80                                          ;
+;     Dedicated logic registers      ; 37                                          ;
+; Total registers                    ; 37                                          ;
+; Total pins                         ; 41                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0                                           ;
+; Total GXB Receiver Channel PMA     ; 0                                           ;
+; Total GXB Transmitter Channel PCS  ; 0                                           ;
+; Total GXB Transmitter Channel PMA  ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CGX150DF31C7    ;                    ;
+; Top-level entity name                                                      ; Test2              ; ElevatorSimulation ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; Comparator4bits.v                ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/Comparator4bits.v    ;         ;
+; CounterDelay.v                   ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/CounterDelay.v       ;         ;
+; halfadder.v                      ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/halfadder.v          ;         ;
+; fulladder2.v                     ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/fulladder2.v         ;         ;
+; DisplayLED.v                     ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/DisplayLED.v         ;         ;
+; DisplayDirection.v               ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/DisplayDirection.v   ;         ;
+; D_flipflop_RST.v                 ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/D_flipflop_RST.v     ;         ;
+; Comparator.v                     ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/Comparator.v         ;         ;
+; CircuitA.v                       ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/CircuitA.v           ;         ;
+; changetoBCD.v                    ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/changetoBCD.v        ;         ;
+; BCD_to_7segment.v                ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/BCD_to_7segment.v    ;         ;
+; adder4bits_single.v              ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/adder4bits_single.v  ;         ;
+; CounterStage.v                   ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/CounterStage.v       ;         ;
+; Octal_4_mux_1.v                  ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/Octal_4_mux_1.v      ;         ;
+; counter2bits.v                   ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/counter2bits.v       ;         ;
+; RingCounter.v                    ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/RingCounter.v        ;         ;
+; Register_1_demux_4.v             ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/Register_1_demux_4.v ;         ;
+; RegisterMultiInput.v             ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/RegisterMultiInput.v ;         ;
+; one_4_mux_1.v                    ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/one_4_mux_1.v        ;         ;
+; Test2.v                          ; yes             ; User Verilog HDL File  ; D:/Quartus/ElevatorSimulation/Test2.v              ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 41               ;
+;                          ;                  ;
+; DSP block 9-bit elements ; 0                ;
+;                          ;                  ;
+; Maximum fan-out node     ; CLOCK_50~input   ;
+; Maximum fan-out          ; 26               ;
+; Total fan-out            ; 388              ;
+; Average fan-out          ; 1.95             ;
++--------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Entity Name       ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |Test2                             ; 80 (26)             ; 37 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 41   ; 0            ; |Test2                                                                                                         ; Test2             ; work         ;
+;    |Comparator:Comparator|         ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|Comparator:Comparator                                                                                   ; Comparator        ; work         ;
+;    |CounterDelay:CounterDelay|     ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterDelay:CounterDelay                                                                               ; CounterDelay      ; work         ;
+;    |CounterStage:CounterStage|     ; 20 (8)              ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage                                                                               ; CounterStage      ; work         ;
+;       |changetoBCD:ChangetoBCD|    ; 12 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD                                                       ; changetoBCD       ; work         ;
+;          |adder4bits_single:ADDS1| ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1                               ; adder4bits_single ; work         ;
+;             |fulladder2:add1|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add1               ; fulladder2        ; work         ;
+;                |halfadder:HA1|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add1|halfadder:HA1 ; halfadder         ; work         ;
+;             |fulladder2:add2|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add2               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add2|halfadder:HA2 ; halfadder         ; work         ;
+;             |fulladder2:add3|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add3               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add3|halfadder:HA2 ; halfadder         ; work         ;
+;             |fulladder2:add4|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add4               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1|fulladder2:add4|halfadder:HA2 ; halfadder         ; work         ;
+;          |adder4bits_single:ADDS2| ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2                               ; adder4bits_single ; work         ;
+;             |fulladder2:add1|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add1               ; fulladder2        ; work         ;
+;                |halfadder:HA1|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add1|halfadder:HA1 ; halfadder         ; work         ;
+;             |fulladder2:add2|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add2               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add2|halfadder:HA2 ; halfadder         ; work         ;
+;             |fulladder2:add3|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add3               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add3|halfadder:HA2 ; halfadder         ; work         ;
+;             |fulladder2:add4|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add4               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2|fulladder2:add4|halfadder:HA2 ; halfadder         ; work         ;
+;          |adder4bits_single:ADDS3| ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3                               ; adder4bits_single ; work         ;
+;             |fulladder2:add1|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add1               ; fulladder2        ; work         ;
+;                |halfadder:HA1|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add1|halfadder:HA1 ; halfadder         ; work         ;
+;             |fulladder2:add2|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add2               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add2|halfadder:HA2 ; halfadder         ; work         ;
+;             |fulladder2:add4|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add4               ; fulladder2        ; work         ;
+;                |halfadder:HA2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3|fulladder2:add4|halfadder:HA2 ; halfadder         ; work         ;
+;    |DisplayLED:Display|            ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|DisplayLED:Display                                                                                      ; DisplayLED        ; work         ;
+;       |BCD_to_7segment:Delay|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|DisplayLED:Display|BCD_to_7segment:Delay                                                                ; BCD_to_7segment   ; work         ;
+;       |BCD_to_7segment:Stage0|     ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|DisplayLED:Display|BCD_to_7segment:Stage0                                                               ; BCD_to_7segment   ; work         ;
+;       |BCD_to_7segment:Stage1|     ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Test2|DisplayLED:Display|BCD_to_7segment:Stage1                                                               ; BCD_to_7segment   ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                          ;
++-------------------------------------------------------------------------------------+---------------------------------------+
+; Register name                                                                       ; Reason for Removal                    ;
++-------------------------------------------------------------------------------------+---------------------------------------+
+; RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter|count[0]   ; Stuck at GND due to stuck port clear  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter|count[3]   ; Stuck at VCC due to stuck port preset ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter|count[1,2] ; Stuck at GND due to stuck port clear  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D37|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D36|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D35|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D34|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D33|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D32|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D31|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D30|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D27|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D26|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D25|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D24|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D23|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D22|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D21|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D20|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D17|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D16|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D15|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D14|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D13|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D12|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D11|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D10|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D07|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D06|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D05|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D04|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D03|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D02|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D01|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D00|Q           ; Stuck at GND due to stuck port clock  ;
+; RegisterMultiInput:Register|counter2bits:Counter|Q[0,1]                             ; Stuck at VCC due to stuck port clock  ;
+; temp[26..31]                                                                        ; Lost fanout                           ;
+; Total Number of Removed Registers = 44                                              ;                                       ;
++-------------------------------------------------------------------------------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                       ;
++-----------------------------------------------------------------------------------+--------------------------+------------------------------------------------------------------------------------+
+; Register name                                                                     ; Reason for Removal       ; Registers Removed due to This Register                                             ;
++-----------------------------------------------------------------------------------+--------------------------+------------------------------------------------------------------------------------+
+; RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter|count[0] ; Stuck at GND             ; RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter|count[1], ;
+;                                                                                   ; due to stuck port clear  ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D17|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D16|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D15|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D14|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D13|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D12|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D11|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D10|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D07|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D06|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D05|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D04|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D03|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D02|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D01|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D00|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|counter2bits:Counter|Q[0],                             ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|counter2bits:Counter|Q[1]                              ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter|count[3] ; Stuck at VCC             ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D37|Q,         ;
+;                                                                                   ; due to stuck port preset ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D36|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D35|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D34|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D33|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D32|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D31|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D30|Q          ;
+; RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter|count[2] ; Stuck at GND             ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D27|Q,         ;
+;                                                                                   ; due to stuck port clear  ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D26|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D25|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D24|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D23|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D22|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D21|Q,         ;
+;                                                                                   ;                          ; RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D20|Q          ;
++-----------------------------------------------------------------------------------+--------------------------+------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 37    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; CounterStage:CounterStage|Q[0]         ; 9       ;
+; CounterDelay:CounterDelay|QD[1]        ; 10      ;
+; CounterDelay:CounterDelay|QD[2]        ; 10      ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayLED:Display|BCD_to_7segment:Delay"                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rst     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rst[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayLED:Display|BCD_to_7segment:Stage1"                                                                                                                                           ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rst     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rst[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayLED:Display|BCD_to_7segment:Stage0"                                                                                                                                           ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rst     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rst[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS3" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; B3   ; Input ; Info     ; Stuck at GND                                                                ;
+; B2   ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS2" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; B3   ; Input ; Info     ; Stuck at GND                                                                ;
+; B2   ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS1" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; B3   ; Input ; Info     ; Stuck at GND                                                                ;
+; B2   ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add4" ;
++-------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                   ;
++-------+--------+----------+-------------------------------------------------------------------------------------------+
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.       ;
++-------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add1"                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; c_in     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; c_in[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; A3   ; Input ; Info     ; Stuck at GND                                                                ;
+; B3   ; Input ; Info     ; Stuck at GND                                                                ;
+; B2   ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D37"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D36"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D35"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D34"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D33"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D32"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D31"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D30"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D27"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D26"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D25"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D24"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D23"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D22"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D21"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D20"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D17"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D16"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D15"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D14"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D13"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D12"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D11"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D10"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D07"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D06"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D05"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D04"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D03"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D02"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D01"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D00"                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; RST     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RST[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterMultiInput:Register|Register_1_demux_4:demux"                                                                                        ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; RESET ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 41                          ;
+; cycloneiii_ff         ; 37                          ;
+;     CLR               ; 4                           ;
+;     ENA               ; 7                           ;
+;     plain             ; 26                          ;
+; cycloneiii_lcell_comb ; 83                          ;
+;     arith             ; 30                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 6                           ;
+;     normal            ; 53                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 28                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.50                        ;
+; Average LUT depth     ; 3.10                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Fri Aug 24 12:42:21 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ElevatorSimulation -c ElevatorSimulation
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file comparator4bits.v
+    Info (12023): Found entity 1: Comparator4bits File: D:/Quartus/ElevatorSimulation/Comparator4bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counterdelay.v
+    Info (12023): Found entity 1: CounterDelay File: D:/Quartus/ElevatorSimulation/CounterDelay.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file t_flipflop.v
+    Info (12023): Found entity 1: T_flipflop File: D:/Quartus/ElevatorSimulation/T_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file smallcounter1.v
+    Info (12023): Found entity 1: SmallCounter1 File: D:/Quartus/ElevatorSimulation/SmallCounter1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register8bit.v
+    Info (12023): Found entity 1: Register8bit File: D:/Quartus/ElevatorSimulation/Register8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file halfadder.v
+    Info (12023): Found entity 1: halfadder File: D:/Quartus/ElevatorSimulation/halfadder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder2.v
+    Info (12023): Found entity 1: fulladder2 File: D:/Quartus/ElevatorSimulation/fulladder2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file displayled.v
+    Info (12023): Found entity 1: DisplayLED File: D:/Quartus/ElevatorSimulation/DisplayLED.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file displaydirection.v
+    Info (12023): Found entity 1: DisplayDirection File: D:/Quartus/ElevatorSimulation/DisplayDirection.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop_rst.v
+    Info (12023): Found entity 1: D_flipflop_RST File: D:/Quartus/ElevatorSimulation/D_flipflop_RST.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counterstagebin.v
+    Info (12023): Found entity 1: CounterStageBin File: D:/Quartus/ElevatorSimulation/CounterStageBin.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counterstage1.v
+    Info (12023): Found entity 1: CounterStage1 File: D:/Quartus/ElevatorSimulation/CounterStage1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparator.v
+    Info (12023): Found entity 1: Comparator File: D:/Quartus/ElevatorSimulation/Comparator.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file circuita.v
+    Info (12023): Found entity 1: CircuitA File: D:/Quartus/ElevatorSimulation/CircuitA.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file changetobcd.v
+    Info (12023): Found entity 1: changetoBCD File: D:/Quartus/ElevatorSimulation/changetoBCD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file changeto7segment .v
+    Info (12023): Found entity 1: changeTo7Segment File: D:/Quartus/ElevatorSimulation/changeTo7Segment .v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_to_7segment.v
+    Info (12023): Found entity 1: BCD_to_7segment File: D:/Quartus/ElevatorSimulation/BCD_to_7segment.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder4bits_single.v
+    Info (12023): Found entity 1: adder4bits_single File: D:/Quartus/ElevatorSimulation/adder4bits_single.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counterstage.v
+    Info (12023): Found entity 1: CounterStage File: D:/Quartus/ElevatorSimulation/CounterStage.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file test1.v
+    Info (12023): Found entity 1: Test1 File: D:/Quartus/ElevatorSimulation/Test1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file octal_4_mux_1.v
+    Info (12023): Found entity 1: Octal_4_mux_1 File: D:/Quartus/ElevatorSimulation/Octal_4_mux_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter2bits.v
+    Info (12023): Found entity 1: counter2bits File: D:/Quartus/ElevatorSimulation/counter2bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file octal_1_demux_4.v
+    Info (12023): Found entity 1: Octal_1_demux_4 File: D:/Quartus/ElevatorSimulation/Octal_1_demux_4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ringcounter.v
+    Info (12023): Found entity 1: RingCounter File: D:/Quartus/ElevatorSimulation/RingCounter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_1_demux_4.v
+    Info (12023): Found entity 1: Register_1_demux_4 File: D:/Quartus/ElevatorSimulation/Register_1_demux_4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file registermultiinput.v
+    Info (12023): Found entity 1: RegisterMultiInput File: D:/Quartus/ElevatorSimulation/RegisterMultiInput.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file one_4_mux_1.v
+    Info (12023): Found entity 1: one_4_mux_1 File: D:/Quartus/ElevatorSimulation/one_4_mux_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file test2.v
+    Info (12023): Found entity 1: Test2 File: D:/Quartus/ElevatorSimulation/Test2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testdirection.v
+    Info (12023): Found entity 1: TestDirection File: D:/Quartus/ElevatorSimulation/TestDirection.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at adder4bits_single.v(9): created implicit net for "x" File: D:/Quartus/ElevatorSimulation/adder4bits_single.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at RegisterMultiInput.v(21): created implicit net for "select" File: D:/Quartus/ElevatorSimulation/RegisterMultiInput.v Line: 21
+Info (12127): Elaborating entity "Test2" for the top level hierarchy
+Info (12128): Elaborating entity "RegisterMultiInput" for hierarchy "RegisterMultiInput:Register" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 31
+Info (12128): Elaborating entity "Register_1_demux_4" for hierarchy "RegisterMultiInput:Register|Register_1_demux_4:demux" File: D:/Quartus/ElevatorSimulation/RegisterMultiInput.v Line: 14
+Info (12128): Elaborating entity "RingCounter" for hierarchy "RegisterMultiInput:Register|Register_1_demux_4:demux|RingCounter:Counter" File: D:/Quartus/ElevatorSimulation/Register_1_demux_4.v Line: 9
+Info (12128): Elaborating entity "D_flipflop_RST" for hierarchy "RegisterMultiInput:Register|Register_1_demux_4:demux|D_flipflop_RST:D00" File: D:/Quartus/ElevatorSimulation/Register_1_demux_4.v Line: 11
+Info (12128): Elaborating entity "one_4_mux_1" for hierarchy "RegisterMultiInput:Register|one_4_mux_1:muxselect" File: D:/Quartus/ElevatorSimulation/RegisterMultiInput.v Line: 21
+Warning (10199): Verilog HDL Case Statement warning at one_4_mux_1.v(11): case item expression never matches the case expression File: D:/Quartus/ElevatorSimulation/one_4_mux_1.v Line: 11
+Warning (10199): Verilog HDL Case Statement warning at one_4_mux_1.v(12): case item expression never matches the case expression File: D:/Quartus/ElevatorSimulation/one_4_mux_1.v Line: 12
+Info (12128): Elaborating entity "counter2bits" for hierarchy "RegisterMultiInput:Register|counter2bits:Counter" File: D:/Quartus/ElevatorSimulation/RegisterMultiInput.v Line: 24
+Warning (10230): Verilog HDL assignment warning at counter2bits.v(6): truncated value with size 32 to match size of target (2) File: D:/Quartus/ElevatorSimulation/counter2bits.v Line: 6
+Info (12128): Elaborating entity "Octal_4_mux_1" for hierarchy "RegisterMultiInput:Register|Octal_4_mux_1:mux" File: D:/Quartus/ElevatorSimulation/RegisterMultiInput.v Line: 26
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:Comparator" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 33
+Info (12128): Elaborating entity "Comparator4bits" for hierarchy "Comparator:Comparator|Comparator4bits:SmallBit" File: D:/Quartus/ElevatorSimulation/Comparator.v Line: 10
+Info (12128): Elaborating entity "CircuitA" for hierarchy "CircuitA:LogicCircuit" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 35
+Info (12128): Elaborating entity "CounterStage" for hierarchy "CounterStage:CounterStage" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 37
+Warning (10230): Verilog HDL assignment warning at CounterStage.v(13): truncated value with size 32 to match size of target (7) File: D:/Quartus/ElevatorSimulation/CounterStage.v Line: 13
+Warning (10230): Verilog HDL assignment warning at CounterStage.v(14): truncated value with size 32 to match size of target (7) File: D:/Quartus/ElevatorSimulation/CounterStage.v Line: 14
+Info (12128): Elaborating entity "changetoBCD" for hierarchy "CounterStage:CounterStage|changetoBCD:ChangetoBCD" File: D:/Quartus/ElevatorSimulation/CounterStage.v Line: 16
+Info (12128): Elaborating entity "adder4bits_single" for hierarchy "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0" File: D:/Quartus/ElevatorSimulation/changetoBCD.v Line: 18
+Info (12128): Elaborating entity "fulladder2" for hierarchy "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add1" File: D:/Quartus/ElevatorSimulation/adder4bits_single.v Line: 6
+Info (12128): Elaborating entity "halfadder" for hierarchy "CounterStage:CounterStage|changetoBCD:ChangetoBCD|adder4bits_single:ADDS0|fulladder2:add1|halfadder:HA1" File: D:/Quartus/ElevatorSimulation/fulladder2.v Line: 5
+Info (12128): Elaborating entity "CounterDelay" for hierarchy "CounterDelay:CounterDelay" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 39
+Warning (10230): Verilog HDL assignment warning at CounterDelay.v(18): truncated value with size 32 to match size of target (4) File: D:/Quartus/ElevatorSimulation/CounterDelay.v Line: 18
+Info (12128): Elaborating entity "DisplayLED" for hierarchy "DisplayLED:Display" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 41
+Info (12128): Elaborating entity "BCD_to_7segment" for hierarchy "DisplayLED:Display|BCD_to_7segment:Stage0" File: D:/Quartus/ElevatorSimulation/DisplayLED.v Line: 12
+Info (12128): Elaborating entity "DisplayDirection" for hierarchy "DisplayLED:Display|DisplayDirection:Direction" File: D:/Quartus/ElevatorSimulation/DisplayLED.v Line: 16
+Warning (12020): Port "c_in" on the entity instantiation of "add1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: D:/Quartus/ElevatorSimulation/adder4bits_single.v Line: 6
+Warning (12020): Port "c_in" on the entity instantiation of "add1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: D:/Quartus/ElevatorSimulation/adder4bits_single.v Line: 6
+Warning (12020): Port "c_in" on the entity instantiation of "add1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: D:/Quartus/ElevatorSimulation/adder4bits_single.v Line: 6
+Warning (12241): 37 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: D:/Quartus/ElevatorSimulation/CounterDelay.v Line: 18
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: D:/Quartus/ElevatorSimulation/Test2.v Line: 11
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Quartus/ElevatorSimulation/output_files/ElevatorSimulation.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[1]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 5
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/Quartus/ElevatorSimulation/Test2.v Line: 6
+Info (21057): Implemented 121 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 80 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Fri Aug 24 12:42:35 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Quartus/ElevatorSimulation/output_files/ElevatorSimulation.map.smsg.
+
+

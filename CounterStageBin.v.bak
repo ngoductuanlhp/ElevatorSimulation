@@ -1,0 +1,16 @@
+module CounterStageBin(clk,EN,DU,D0,D1);
+
+input clk;
+input EN,DU;
+reg [6:0]q;
+
+output [3:0]D0,D1;
+	
+always @(posedge clk)
+begin
+if((EN==0)&&(DU==0)) q<=q+1;
+if((EN==0)&&(DU==1)) q<=q-1;
+end
+changetoBCD ChangetoBCD(q[6],q[5],q[4],q[3],q[2],q[1],q[0],D0,D1);
+
+endmodule

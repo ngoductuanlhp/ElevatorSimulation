@@ -1,0 +1,21 @@
+module SmallCounter1(clk,RESET,ENABLE,LOAD,RCO,q);
+input clk;
+input RESET;
+input ENABLE;
+input LOAD;
+output RCO;
+output reg [3:0]q;
+
+assign RCO=~q[0]&~q[1]&~q[2]&~q[3];
+
+always @(posedge clk or negedge RESET or negedge LOAD)
+begin
+ 
+if(RESET==0 || (LOAD==0))
+begin 
+ q<=4'b0101;
+ end
+else if(RCO==0 && (ENABLE==1)) q<=q-1;
+
+end
+endmodule

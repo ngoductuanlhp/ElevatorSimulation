@@ -1,0 +1,431 @@
+// Copyright (C) 2016  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
+
+// DATE "08/21/2018 14:37:44"
+
+// 
+// Device: Altera EP4CGX150DF31C7 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Register8bit (
+	inA,
+	inB,
+	LOAD,
+	RST,
+	outA,
+	outB);
+input 	[3:0] inA;
+input 	[3:0] inB;
+input 	LOAD;
+input 	RST;
+output 	[3:0] outA;
+output 	[3:0] outB;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \outA[0]~output_o ;
+wire \outA[1]~output_o ;
+wire \outA[2]~output_o ;
+wire \outA[3]~output_o ;
+wire \outB[0]~output_o ;
+wire \outB[1]~output_o ;
+wire \outB[2]~output_o ;
+wire \outB[3]~output_o ;
+wire \LOAD~input_o ;
+wire \inA[0]~input_o ;
+wire \RST~input_o ;
+wire \Bit00|Q~q ;
+wire \inA[1]~input_o ;
+wire \Bit01|Q~q ;
+wire \inA[2]~input_o ;
+wire \Bit02|Q~q ;
+wire \inA[3]~input_o ;
+wire \Bit03|Q~q ;
+wire \inB[0]~input_o ;
+wire \Bit10|Q~q ;
+wire \inB[1]~input_o ;
+wire \Bit11|Q~q ;
+wire \inB[2]~input_o ;
+wire \Bit12|Q~q ;
+wire \inB[3]~input_o ;
+wire \Bit13|Q~q ;
+
+
+cycloneiv_io_obuf \outA[0]~output (
+	.i(\Bit00|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outA[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outA[0]~output .bus_hold = "false";
+defparam \outA[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \outA[1]~output (
+	.i(\Bit01|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outA[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outA[1]~output .bus_hold = "false";
+defparam \outA[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \outA[2]~output (
+	.i(\Bit02|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outA[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outA[2]~output .bus_hold = "false";
+defparam \outA[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \outA[3]~output (
+	.i(\Bit03|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outA[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outA[3]~output .bus_hold = "false";
+defparam \outA[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \outB[0]~output (
+	.i(\Bit10|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outB[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outB[0]~output .bus_hold = "false";
+defparam \outB[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \outB[1]~output (
+	.i(\Bit11|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outB[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outB[1]~output .bus_hold = "false";
+defparam \outB[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \outB[2]~output (
+	.i(\Bit12|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outB[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outB[2]~output .bus_hold = "false";
+defparam \outB[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \outB[3]~output (
+	.i(\Bit13|Q~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\outB[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \outB[3]~output .bus_hold = "false";
+defparam \outB[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \LOAD~input (
+	.i(LOAD),
+	.ibar(gnd),
+	.o(\LOAD~input_o ));
+// synopsys translate_off
+defparam \LOAD~input .bus_hold = "false";
+defparam \LOAD~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inA[0]~input (
+	.i(inA[0]),
+	.ibar(gnd),
+	.o(\inA[0]~input_o ));
+// synopsys translate_off
+defparam \inA[0]~input .bus_hold = "false";
+defparam \inA[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \RST~input (
+	.i(RST),
+	.ibar(gnd),
+	.o(\RST~input_o ));
+// synopsys translate_off
+defparam \RST~input .bus_hold = "false";
+defparam \RST~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit00|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inA[0]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit00|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit00|Q .is_wysiwyg = "true";
+defparam \Bit00|Q .power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inA[1]~input (
+	.i(inA[1]),
+	.ibar(gnd),
+	.o(\inA[1]~input_o ));
+// synopsys translate_off
+defparam \inA[1]~input .bus_hold = "false";
+defparam \inA[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit01|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inA[1]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit01|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit01|Q .is_wysiwyg = "true";
+defparam \Bit01|Q .power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inA[2]~input (
+	.i(inA[2]),
+	.ibar(gnd),
+	.o(\inA[2]~input_o ));
+// synopsys translate_off
+defparam \inA[2]~input .bus_hold = "false";
+defparam \inA[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit02|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inA[2]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit02|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit02|Q .is_wysiwyg = "true";
+defparam \Bit02|Q .power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inA[3]~input (
+	.i(inA[3]),
+	.ibar(gnd),
+	.o(\inA[3]~input_o ));
+// synopsys translate_off
+defparam \inA[3]~input .bus_hold = "false";
+defparam \inA[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit03|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inA[3]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit03|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit03|Q .is_wysiwyg = "true";
+defparam \Bit03|Q .power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inB[0]~input (
+	.i(inB[0]),
+	.ibar(gnd),
+	.o(\inB[0]~input_o ));
+// synopsys translate_off
+defparam \inB[0]~input .bus_hold = "false";
+defparam \inB[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit10|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inB[0]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit10|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit10|Q .is_wysiwyg = "true";
+defparam \Bit10|Q .power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inB[1]~input (
+	.i(inB[1]),
+	.ibar(gnd),
+	.o(\inB[1]~input_o ));
+// synopsys translate_off
+defparam \inB[1]~input .bus_hold = "false";
+defparam \inB[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit11|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inB[1]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit11|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit11|Q .is_wysiwyg = "true";
+defparam \Bit11|Q .power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inB[2]~input (
+	.i(inB[2]),
+	.ibar(gnd),
+	.o(\inB[2]~input_o ));
+// synopsys translate_off
+defparam \inB[2]~input .bus_hold = "false";
+defparam \inB[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit12|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inB[2]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit12|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit12|Q .is_wysiwyg = "true";
+defparam \Bit12|Q .power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \inB[3]~input (
+	.i(inB[3]),
+	.ibar(gnd),
+	.o(\inB[3]~input_o ));
+// synopsys translate_off
+defparam \inB[3]~input .bus_hold = "false";
+defparam \inB[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \Bit13|Q (
+	.clk(!\LOAD~input_o ),
+	.d(\inB[3]~input_o ),
+	.asdata(vcc),
+	.clrn(!\RST~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Bit13|Q~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Bit13|Q .is_wysiwyg = "true";
+defparam \Bit13|Q .power_up = "low";
+// synopsys translate_on
+
+assign outA[0] = \outA[0]~output_o ;
+
+assign outA[1] = \outA[1]~output_o ;
+
+assign outA[2] = \outA[2]~output_o ;
+
+assign outA[3] = \outA[3]~output_o ;
+
+assign outB[0] = \outB[0]~output_o ;
+
+assign outB[1] = \outB[1]~output_o ;
+
+assign outB[2] = \outB[2]~output_o ;
+
+assign outB[3] = \outB[3]~output_o ;
+
+endmodule

@@ -1,0 +1,13 @@
+module TestDirection(SW,HEX0);
+input SW;
+output reg [6:0]HEX0;
+
+always @*
+	begin
+		case (inD)
+		1:outD=7'b1110001;
+		0:outD=7'b1001110;
+		endcase
+		
+	end
+endmodule
